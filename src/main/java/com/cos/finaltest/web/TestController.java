@@ -1,4 +1,4 @@
-package com.cos.finaltest.controller;
+package com.cos.finaltest.web;
 
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;

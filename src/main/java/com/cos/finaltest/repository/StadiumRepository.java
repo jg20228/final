@@ -1,5 +1,7 @@
 package com.cos.finaltest.repository;
 
-public class StadiumRepository {
+import com.cos.finaltest.model.Stadium;
 
+public interface StadiumRepository {
+	public void save(Stadium stadium);
 }

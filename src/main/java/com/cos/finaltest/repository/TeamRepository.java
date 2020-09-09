@@ -1,5 +1,5 @@
 package com.cos.finaltest.repository;
 
-public class TeamRepository {
+public interface TeamRepository {
 
 }

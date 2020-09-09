@@ -22,13 +22,16 @@
   <!-- Links -->
   <ul class="navbar-nav">
     <li class="nav-item">
-      <a class="nav-link" href="/stardium">경기장</a>
+      <a class="nav-link" href="/stardium">경기장 목록</a>
     </li>
     <li class="nav-item">
       <a class="nav-link" href="/stardiumSaveForm">경기장 등록</a>
     </li>
     <li class="nav-item">
-      <a class="nav-link" href="test/stardium">JSON TEST</a>
+      <a class="nav-link" href="/team">팀 목록</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" href="/teamSaveForm">팀 등록</a>
     </li>
   </ul>
 </nav>

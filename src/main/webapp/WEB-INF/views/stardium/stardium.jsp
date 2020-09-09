@@ -12,7 +12,6 @@
 				<th>개장일</th>
 				<th>수정</th>
 				<th>삭제</th>
-				<th>etc</th>
 			</tr>
 		</thead>
 		<tbody>
@@ -23,7 +22,6 @@
 					<td><fmt:formatDate value="${stardium.createDate}" pattern="yyyy-MM-dd" /></td>
 					<td><a href="/stardiumUpdateForm/${stardium.id}/${stardium.name}"><i class="fa fa-wrench"></i></a></td>
 					<td><i onclick="stardiumDelete(${stardium.id},this);" class="fa fa-minus"></i></td>
-					<td><a href="/post/${stardium.id}">${stardium.name}</a></td>
 				</tr>
 			</c:forEach>
 		</tbody>

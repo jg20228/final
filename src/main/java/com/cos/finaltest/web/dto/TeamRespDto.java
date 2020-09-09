@@ -1,4 +1,4 @@
-package com.cos.finaltest.model;
+package com.cos.finaltest.web.dto;
 
 import java.sql.Timestamp;
 
@@ -11,8 +11,9 @@ import lombok.NoArgsConstructor;
 @NoArgsConstructor
 @AllArgsConstructor
 @Builder
-public class Stadium {
-	private	int id;
-	private	String name;
-	private	Timestamp createDate;
+public class TeamRespDto {
+	private int id;
+	private String stadiumName;
+	private String teamName; //팀이름
+	private Timestamp createDate;
 }

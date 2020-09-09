@@ -5,8 +5,8 @@
 <h1>경기장 수정 페이지입니다.</h1>
 </div>
 <form id="frm">
-<input type="text" name="id" value="${stadium.id}"/>
-<input type="text" name="createDate" value="${stadium.createDate}"/>
+<input type="hidden" name="id" value="${stadium.id}"/>
+<input type="hidden" name="createDate" value="${stadium.createDate}"/>
 경기장 이름 : <input type="text" name="name" value="${stadium.name}"/>
 
 <button type="button" onclick="stardiumUpdate()">수정</button>

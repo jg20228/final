@@ -12,9 +12,9 @@ import lombok.NoArgsConstructor;
 @AllArgsConstructor
 @Builder
 public class Player {
-	int id;
-	int teamId;
-	String position;
-	String name;
-	Timestamp createDate;
+	private	int id;
+	private	int teamId;
+	private	String position;
+	private	String name;
+	private	Timestamp createDate;
 }

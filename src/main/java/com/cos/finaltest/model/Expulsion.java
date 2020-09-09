@@ -12,8 +12,8 @@ import lombok.NoArgsConstructor;
 @AllArgsConstructor
 @Builder
 public class Expulsion {
-	int id;
-	int playerId;
-	String reason;
-	Timestamp createDate;
+	private	int id;
+	private	int playerId;
+	private	String reason;
+	private	Timestamp createDate;
 }

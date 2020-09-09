@@ -13,8 +13,8 @@ import lombok.NoArgsConstructor;
 @AllArgsConstructor
 @Builder
 public class Team {
-	int id;
-	int stadiumId;
-	String name;
-	Timestamp createDate;
+	private int id;
+	private int stadiumId;
+	private String name;
+	private Timestamp createDate;
 }

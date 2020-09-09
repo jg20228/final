@@ -9,6 +9,6 @@ public interface StadiumRepository {
 	public void save(Stadium stadium);
 	public List<Stadium> findAll();
 	public void deleteById(int id);
-	public StadiumRespDto findByIdAndName(int id, String name);
+	public Stadium findByIdAndName(int id, String name);
 	public void update(Stadium stadium);
 }

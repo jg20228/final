@@ -35,8 +35,8 @@ public class StadiumController {
 	@GetMapping("/stardiumUpdateForm/{id}/{name}")
 	public String stardiumUpdateForm(@PathVariable int id,@PathVariable String name,Model model) {
 		System.out.println(id+","+name);
-		StadiumRespDto stadiumRespDto = stadiumRepository.findByIdAndName(id, name);
-		model.addAttribute("stadium", stadiumRespDto);
+		Stadium stadium = stadiumRepository.findByIdAndName(id, name);
+		model.addAttribute("stadium", stadium);
 		return "stardium/stardiumUpdateForm";
 	}
 	

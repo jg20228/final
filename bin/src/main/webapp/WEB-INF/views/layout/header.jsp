@@ -39,17 +39,6 @@
     <li class="nav-item">
       <a class="nav-link" href="/playerSaveForm">선수 등록</a>
     </li>
-    <li class="nav-item">
-      <a class="nav-link" href="/position">팀 별 포지션 목록</a>
-    </li>
-    
-    <li class="nav-item">
-      <a class="nav-link" href="/expulsion">퇴출된 선수 목록</a>
-    </li>
-    
-    <li class="nav-item">
-      <a class="nav-link" href="/expulsionSaveForm">퇴출 사유 등록</a>
-    </li>
   </ul>
 </nav>
 

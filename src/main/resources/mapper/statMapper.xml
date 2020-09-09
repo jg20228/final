@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.cos.finaltest.repository.StatRepository">
+	<select id="findAll" resultType="com.cos.finaltest.web.dto.StatisticsRespDto">
+		SELECT POSITION,
+			MAX(if(p.teamId=t.id,p.name,""))"doosan",
+			MAX(if(p.teamId=t.id,p.name,""))"nc",
+			MAX(if(p.teamId=t.id,p.name,""))"lotte"
+			FROM player p LEFT OUTER join team t
+			ON t.id = p.teamId
+		GROUP BY position;
+	</select>
+</mapper>

@@ -4,4 +4,21 @@
   "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="com.cos.finaltest.repository.ExpulsionRepository">
 
+	<select id="findAll" resultType="com.cos.finaltest.web.dto.ExpulsionDto">
+		SELECT p.id, t.name "teamName", p.name "playerName", p.position, 
+		IFNULL(e.reason,"")"reason" ,
+		IFNULL(e.createDate,"") "createDate",
+		( SELECT COUNT(*) + 1 FROM player WHERE name <![CDATA[<]]> p.name ) AS no
+		FROM player p LEFT OUTER JOIN expulsion e
+		ON p.id = e.playerId
+        INNER JOIN team t
+        ON p.teamId = t.id
+		WHERE p.teamId = #{teamId}
+		order by No
+	</select>
+
+	<insert id="save">
+		INSERT into expulsion(reason,playerId,createDate)
+		VALUES(#{reason},#{playerId},now())
+	</insert>
 </mapper>

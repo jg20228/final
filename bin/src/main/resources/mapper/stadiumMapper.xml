@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.cos.finaltest.repository.StadiumRepository">
+
+	<select id="findAll" resultType="com.cos.finaltest.web.dto.StadiumRespDto">
+		SELECT id, name, createDate, 
+		(SELECT COUNT(*) + 1 FROM stadium WHERE name <![CDATA[<]]> s.name) AS no
+		FROM stadium s
+		order by no
+	</select>
+	
+	<select id="findByIdAndName" resultType="com.cos.finaltest.model.Stadium">
+		SELECT id, name, createDate 
+		FROM stadium
+		WHERE id = #{id} AND name = #{name}
+	</select>
+
+	<delete id="deleteById">
+		DELETE FROM stadium
+		WHERE id = #{id}
+	</delete>
+	
+	<update id="update">
+		UPDATE stadium SET name = #{name}
+		WHERE id = #{id} 
+	</update>
+
+	<insert id="save">
+		INSERT INTO stadium(name, createDate) 
+		VALUES(#{name}, now()) 
+	</insert>
+	
+</mapper>

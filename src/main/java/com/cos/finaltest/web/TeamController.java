@@ -26,7 +26,7 @@ public class TeamController {
 
 	@GetMapping("/team")
 	public String team(Model model) {
-		model.addAttribute("teams", teamRepository.findAll());
+		model.addAttribute("teams", teamRepository.findAllJoin());
 		return "team/team";
 	}
 	

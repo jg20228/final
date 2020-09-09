@@ -5,11 +5,11 @@
 <h1>팀 수정 페이지입니다.</h1>
 </div>
 <form id="frm">
-<input type="text" name="id" value="${respDto.teamRespDto.id}"/>
+<input type="hidden" name="id" value="${respDto.teamRespDto.id}"/>
 
-현재 야구장 : <input type="text" value="${respDto.teamRespDto.stadiumName}"/>
+현재 야구장 : <input type="text" value="${respDto.teamRespDto.stadiumName}" readOnly/>
 
-<input type="text" name="createDate" value="${respDto.teamRespDto.createDate}"/>
+<input type="hidden" name="createDate" value="${respDto.teamRespDto.createDate}"/>
 
 <hr/>
 <select name="stadiumId">

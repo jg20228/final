@@ -4,7 +4,12 @@
   "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="com.cos.finaltest.repository.TeamRepository">
 
-	<select id="findAll" resultType="com.cos.finaltest.web.dto.TeamRespDto">
+	<select id="findAll" resultType="com.cos.finaltest.model.Team">
+		SELECT id,stadiumId,name,createDate
+		FROM team
+	</select>
+
+	<select id="findAllJoin" resultType="com.cos.finaltest.web.dto.TeamRespDto">
 		SELECT t.id, s.name "stadiumName", t.name "teamName", t.createDate
 		FROM team t INNER JOIN stadium s
 		ON t.stadiumId = s.id

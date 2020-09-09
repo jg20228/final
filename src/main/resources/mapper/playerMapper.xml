@@ -4,4 +4,36 @@
   "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="com.cos.finaltest.repository.PlayerRepository">
 
+	<select id="findAll" resultType="com.cos.finaltest.model.Player">
+		SELECT id,name,teamId,position,createDate
+		FROM player
+	</select>
+	
+	<select id="findAllJoin" resultType="com.cos.finaltest.web.dto.PlayerRespDto">
+		SELECT p.id, t.name "teamName", p.position, p.name "playerName", p.createDate
+		FROM player p INNER JOIN team t
+		ON p.teamId = t.id
+	</select>
+	
+	<select id="findByIdAndName" resultType="com.cos.finaltest.web.dto.PlayerRespDto">
+		SELECT p.id, t.name "teamName", p.position, p.name "playerName", p.createDate
+		FROM player p INNER JOIN team t
+		ON p.teamId = t.id
+		WHERE p.id = #{id} AND p.name = #{name}
+	</select>
+
+	<insert id="save">
+		INSERT INTO player(name, teamId, position, createDate) 
+		VALUES(#{name}, #{teamId}, #{position} ,now()) 
+	</insert>
+	
+	<update id="update">
+		UPDATE player SET name = #{name} , teamId = #{teamId}, position=#{position}
+		WHERE id = #{id} 
+	</update>
+	
+	<delete id="deleteById">
+		DELETE FROM player
+		WHERE id = #{id}
+	</delete>
 </mapper>

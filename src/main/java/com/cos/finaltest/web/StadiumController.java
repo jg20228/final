@@ -11,6 +11,7 @@ import org.springframework.web.bind.annotation.ResponseBody;
 
 import com.cos.finaltest.model.Stadium;
 import com.cos.finaltest.repository.StadiumRepository;
+import com.cos.finaltest.web.dto.StadiumRespDto;
 
 import lombok.RequiredArgsConstructor;
 
@@ -19,7 +20,6 @@ import lombok.RequiredArgsConstructor;
 public class StadiumController {
 	
 	private final StadiumRepository stadiumRepository;
-
 	
 	@GetMapping("/stardium")
 	public String stardium(Model model) {
@@ -35,8 +35,8 @@ public class StadiumController {
 	@GetMapping("/stardiumUpdateForm/{id}/{name}")
 	public String stardiumUpdateForm(@PathVariable int id,@PathVariable String name,Model model) {
 		System.out.println(id+","+name);
-		Stadium stadium = stadiumRepository.findByIdAndName(id, name);
-		model.addAttribute("stadium", stadium);
+		StadiumRespDto stadiumRespDto = stadiumRepository.findByIdAndName(id, name);
+		model.addAttribute("stadium", stadiumRespDto);
 		return "stardium/stardiumUpdateForm";
 	}
 	

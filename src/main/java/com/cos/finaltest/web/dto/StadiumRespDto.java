@@ -11,11 +11,9 @@ import lombok.NoArgsConstructor;
 @NoArgsConstructor
 @AllArgsConstructor
 @Builder
-public class PlayerRespDto {
-	private int id;
-	private String teamName;
-	private String position;
-	private String playerName;
-	private Timestamp createDate;
+public class StadiumRespDto {
+	private	int id;
+	private	String name;
+	private	Timestamp createDate;
 	private int no;
 }

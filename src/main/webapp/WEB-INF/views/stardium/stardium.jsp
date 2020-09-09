@@ -17,7 +17,7 @@
 		<tbody>
 			<c:forEach var="stardium" items="${stardiums}">
 				<tr class="stardium-${stardium.id}">
-					<td>${stardium.id}</td>
+					<td>${stardium.no}</td>
 					<td>${stardium.name}</td>
 					<td><fmt:formatDate value="${stardium.createDate}" pattern="yyyy-MM-dd" /></td>
 					<td><a href="/stardiumUpdateForm/${stardium.id}/${stardium.name}"><i class="fa fa-wrench"></i></a></td>

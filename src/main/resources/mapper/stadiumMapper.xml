@@ -4,9 +4,11 @@
   "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="com.cos.finaltest.repository.StadiumRepository">
 
-	<select id="findAll" resultType="com.cos.finaltest.model.Stadium">
-		SELECT id, name, createDate 
-		FROM stadium 
+	<select id="findAll" resultType="com.cos.finaltest.web.dto.StadiumRespDto">
+		SELECT id, name, createDate, 
+		(SELECT COUNT(*) + 1 FROM stadium WHERE name <![CDATA[<]]> s.name) AS no
+		FROM stadium s
+		order by no
 	</select>
 	
 	<select id="findByIdAndName" resultType="com.cos.finaltest.model.Stadium">
@@ -29,4 +31,5 @@
 		INSERT INTO stadium(name, createDate) 
 		VALUES(#{name}, now()) 
 	</insert>
+	
 </mapper>

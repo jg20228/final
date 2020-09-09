@@ -16,4 +16,5 @@ public class TeamRespDto {
 	private String stadiumName;
 	private String teamName; //팀이름
 	private Timestamp createDate;
+	private int no;
 }

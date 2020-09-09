@@ -11,8 +11,10 @@
 
 	<select id="findAllJoin" resultType="com.cos.finaltest.web.dto.TeamRespDto">
 		SELECT t.id, s.name "stadiumName", t.name "teamName", t.createDate
+		, ( SELECT COUNT(*) + 1 FROM team WHERE name <![CDATA[<]]> t.name ) AS no
 		FROM team t INNER JOIN stadium s
 		ON t.stadiumId = s.id
+		order by no
 	</select>
 	
 	<select id="findByIdAndName" resultType="com.cos.finaltest.web.dto.TeamRespDto">

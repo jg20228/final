@@ -18,7 +18,7 @@
 		<tbody>
 			<c:forEach var="team" items="${teams}">
 				<tr class="stardium-${team.id}">
-					<td>${team.id}</td>
+					<td>${team.no}</td>
 					<td>${team.stadiumName}</td>
 					<td>${team.teamName}</td>
 					<td><fmt:formatDate value="${team.createDate}" pattern="yyyy-MM-dd" /></td>

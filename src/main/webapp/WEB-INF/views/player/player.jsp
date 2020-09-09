@@ -3,7 +3,7 @@
 
  <div class="container">
  <h1>선수 목록 페이지입니다.</h1>
-	<table border="1">
+	<table border="1" class="table">
 		<thead>
 			<tr>
 				<th>번호</th>
@@ -18,7 +18,7 @@
 		<tbody>
 			<c:forEach var="player" items="${players}">
 				<tr class="player-${player.id}">
-					<td>${player.id}</td>
+					<td>${player.no}</td>
 					<td>${player.teamName}</td>
 					<td>${player.position}</td>
 					<td>${player.playerName}</td>
@@ -30,5 +30,6 @@
 		</tbody>
 	</table>
 </div>
+
 <script src="/js/player.js"></script>
 <%@include file="../layout/footer.jsp"%>

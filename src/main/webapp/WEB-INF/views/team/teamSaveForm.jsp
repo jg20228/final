@@ -3,7 +3,7 @@
 <%@include file="../layout/header.jsp"%>
 <div class="container">
 <h1>팀 등록 페이지입니다.</h1>
-</div>
+
 <form id="frm">
 야구장 이름 : 
 <select name="stadiumId">
@@ -15,6 +15,6 @@
 <button type="button" onclick="teamSave()">등록</button>
 </form>
 
-
+</div>
 <script src="/js/team.js"></script>
 <%@include file="../layout/footer.jsp"%>

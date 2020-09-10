@@ -3,7 +3,7 @@
 <%@include file="../layout/header.jsp"%>
 <div class="container">
 <h1>팀 수정 페이지입니다.</h1>
-</div>
+
 <form id="frm">
 <input type="hidden" name="id" value="${respDto.teamRespDto.id}"/>
 
@@ -22,7 +22,7 @@
 
 <button type="button" onclick="teamUpdate()">수정</button>
 </form>
-
+</div>
 
 <script src="/js/team.js"></script>
 <%@include file="../layout/footer.jsp"%>

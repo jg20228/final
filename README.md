@@ -1,5 +1,15 @@
 ### 스프링 파이널 테스트
 
+![10](https://user-images.githubusercontent.com/62128942/92667515-1e039400-f347-11ea-83a9-4c6076c7583c.png)
+![11](https://user-images.githubusercontent.com/62128942/92667528-23f97500-f347-11ea-8546-c4d9f574103b.png)
+![12](https://user-images.githubusercontent.com/62128942/92667530-252aa200-f347-11ea-8130-4d9a77533692.png)
+![13](https://user-images.githubusercontent.com/62128942/92667532-25c33880-f347-11ea-8d0e-14bacb16ec7b.png)
+![14](https://user-images.githubusercontent.com/62128942/92667534-26f46580-f347-11ea-8c78-57423a7ce2d3.png)
+![15](https://user-images.githubusercontent.com/62128942/92667536-28259280-f347-11ea-9dd2-a8bf2f7ec49a.png)
+![16](https://user-images.githubusercontent.com/62128942/92667538-2956bf80-f347-11ea-9809-79c3f1e8f0e7.png)
+![17](https://user-images.githubusercontent.com/62128942/92667539-29ef5600-f347-11ea-8ac8-c2b0cd7aa945.gif)
+![18](https://user-images.githubusercontent.com/62128942/92667543-2a87ec80-f347-11ea-9f75-b13feadc679b.gif)
+
 # 의존성
 
 - Spring Boot DevTools
@@ -112,6 +122,7 @@ VALUES("오태근",3,"내야수",now());
 ```
 
 # pivot
+
 ```sql
 SELECT POSITION,
 MAX(if(teamId=1,name,""))"두산",
@@ -122,6 +133,7 @@ GROUP BY position;
 ```
 
 # rank
+
 ```sql
 SELECT p.id, t.name "teamName", p.position, p.name "playerName", p.createDate
 , ( SELECT COUNT(*) + 1 FROM player WHERE name <![CDATA[<]]> p.name ) AS no

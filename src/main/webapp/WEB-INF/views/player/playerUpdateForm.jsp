@@ -3,7 +3,7 @@
 <%@include file="../layout/header.jsp"%>
 <div class="container">
 <h1>선수 수정 페이지입니다.</h1>
-</div>
+
 <form id="frm">
 <input type="hidden" name="id" value="${respDto.playerRespDto.id}"/>
 
@@ -24,6 +24,6 @@
 <button type="button" onclick="playerUpdate()">수정</button>
 </form>
 
-
+</div>
 <script src="/js/player.js"></script>
 <%@include file="../layout/footer.jsp"%>

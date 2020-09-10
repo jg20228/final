@@ -4,7 +4,7 @@
  <div class="container">
  <h1>팀 목록 페이지입니다.</h1>
  
-	<table border="1">
+	<table border="1" class="table">
 		<thead>
 			<tr>
 				<th>번호</th>

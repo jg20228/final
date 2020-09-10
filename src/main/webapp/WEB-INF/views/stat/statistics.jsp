@@ -3,7 +3,7 @@
 <%@include file="../layout/header.jsp"%>
 <div class="container">
 <h1>(7)포지션별 팀의 야구 선수 페이지</h1>
-	<table border="1">
+	<table border="1" class="table">
 		<thead>
 			<tr>
 				<th>포지션</th>
